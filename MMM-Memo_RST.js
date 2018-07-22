@@ -148,7 +148,7 @@
         }
                 
 
-        self.tempMemos.forEach(function(sub){
+        tempMemos.forEach(function(sub){
             var subWrapper = document.createElement("tr");
     
             // Label
@@ -302,8 +302,7 @@
                 blockquote_table.appendChild(last_row);
             }
 
-            wrapper_blockquote.appendChild(blockquote_table);
-            wrapper.appendChild(wrapper_blockquote);
+            wrapper_blockquote.appendChild(blockquote_table);            wrapper.appendChild(wrapper_blockquote);
         }*/
         console.log(wrapper);
         return wrapper;
