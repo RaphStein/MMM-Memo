@@ -127,6 +127,7 @@
 
 
 	getDom: function() {
+        console.log("getDom");
         self = this;
 		var wrapper = document.createElement("table");
         wrapper.className = "small";
@@ -137,9 +138,12 @@
 	        if (this.memos[i].memoTitle.toLowerCase() == this.config.memoTitle.toLowerCase()) {
 	            tempMemos.push(this.memos[i]);
 	        }
-	    }
+        }
+        console.log(tempMemos);
+        
 	    var tempMemosSize = tempMemos.length;
-	    while(tempMemos.length > this.config.memoMaxItems) {
+        console.log(tempMemosSize);
+        while(tempMemos.length > this.config.memoMaxItems) {
             tempMemos.shift();
         }
                 
@@ -301,6 +305,7 @@
             wrapper_blockquote.appendChild(blockquote_table);
             wrapper.appendChild(wrapper_blockquote);
         }*/
+        console.log(wrapper);
         return wrapper;
 	}
 });
