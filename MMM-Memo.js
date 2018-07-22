@@ -148,11 +148,11 @@
             var subWrapper = document.createElement("tr");
     
             // Label
-            var labelWrapper = document.createElement("td");
+            /*var labelWrapper = document.createElement("td");
             labelWrapper.innerHTML = sub.label;
             labelWrapper.className = "align-left";
             subWrapper.appendChild(labelWrapper);
-    
+    */
             // Value
             var valueWrapper = document.createElement("td");
             valueWrapper.innerHTML = sub.item;
@@ -160,11 +160,11 @@
             subWrapper.appendChild(valueWrapper);
 
             // Suffix
-            var suffixWrapper = document.createElement("td");
+      /*      var suffixWrapper = document.createElement("td");
             suffixWrapper.innerHTML = sub.suffix;
             suffixWrapper.className = "align-left";
             subWrapper.appendChild(suffixWrapper);
-
+            */
             wrapper.appendChild(subWrapper);
         });
 
