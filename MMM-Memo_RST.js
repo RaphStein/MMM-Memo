@@ -7,7 +7,7 @@
  *
  */
 
- Module.register('MMM-Memo',{
+ Module.register('MMM-Memo_RST',{
 
 	memos: [],
 
