@@ -127,7 +127,48 @@
 
 
 	getDom: function() {
+        self = this;
+		var wrapper = document.createElement("table");
+        wrapper.className = "small";
+        var first = true;
+    
+        var tempMemos = [];
+	    for (var i = 0; i < this.memos.length ; i++ ) {
+	        if (this.memos[i].memoTitle.toLowerCase() == this.config.memoTitle.toLowerCase()) {
+	            tempMemos.push(this.memos[i]);
+	        }
+	    }
+	    var tempMemosSize = tempMemos.length;
+	    while(tempMemos.length > this.config.memoMaxItems) {
+            tempMemos.shift();
+        }
+                
 
+        self.tempMemos.forEach(function(sub){
+            var subWrapper = document.createElement("tr");
+    
+            // Label
+            var labelWrapper = document.createElement("td");
+            labelWrapper.innerHTML = sub.label;
+            labelWrapper.className = "align-left";
+            subWrapper.appendChild(labelWrapper);
+    
+            // Value
+            var valueWrapper = document.createElement("td");
+            valueWrapper.innerHTML = sub.item;
+            valueWrapper.className = "align-right bright medium";
+            subWrapper.appendChild(valueWrapper);
+
+            // Suffix
+            var suffixWrapper = document.createElement("td");
+            suffixWrapper.innerHTML = sub.suffix;
+            suffixWrapper.className = "align-left";
+            subWrapper.appendChild(suffixWrapper);
+
+            wrapper.appendChild(subWrapper);
+        });
+
+/*
 	    // Creation of a temporary array for the current memo
 	    var tempMemos = [];
 	    for (var i = 0; i < this.memos.length ; i++ ) {
@@ -259,7 +300,7 @@
 
             wrapper_blockquote.appendChild(blockquote_table);
             wrapper.appendChild(wrapper_blockquote);
-        }
+        }*/
         return wrapper;
 	}
 });

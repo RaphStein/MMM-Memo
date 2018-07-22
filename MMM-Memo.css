@@ -351,3 +351,14 @@
 .Purple {background: #a020f0;}
 .MediumPurple {background: #9370db;}
 .Thistle {background: #d8bfd8;}
+.border_bottom td{
+  border-bottom: 1pt solid #444444;
+}
+
+.border_top td{
+  border-top: 1pt solid #444444;
+}
+
+td {
+  padding-right: 5px;
+}
