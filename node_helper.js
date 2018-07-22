@@ -103,6 +103,10 @@ module.exports = NodeHelper.create({
 	},
 
 	storeMemos: function(item){
+		if (this.memos == null)
+		{
+			this.memos = [];
+		}
 		this.memos.push(item);
 		fs.writeFileSync(this.memoFilename, JSON.stringify({"memos": this.memos}), 'utf8');
 	},
